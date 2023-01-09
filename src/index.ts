@@ -1,4 +1,4 @@
-import person2 from './calculate';
+import person2 from './person';
 
 const longString =
   'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer ut aliquet diam.';
