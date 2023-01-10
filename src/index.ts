@@ -1,4 +1,5 @@
 import person2 from './person';
+import {findSong} from './song';
 
 const longString =
   'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer ut aliquet diam.';
@@ -27,3 +28,4 @@ export function doSomeStuff(
 }
 
 console.log(person2);
+console.log(findSong?.song);
