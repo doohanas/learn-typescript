@@ -6,7 +6,7 @@
     "typescript": "^4.9.4"
   },
   "scripts": {
-    "start": "nodemon ./build/src/index.js",
+    "build": "nodemon ./build/src/index.js",
     "dev": "npx tsc -w",
     "lint": "gts lint",
     "clean": "gts clean",

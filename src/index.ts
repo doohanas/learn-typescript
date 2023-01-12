@@ -1,5 +1,6 @@
 import person2 from './person';
 import {findSong} from './song';
+import {book, vehicle, numberBig, employee, sym1} from './utils/data';
 
 const longString =
   'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer ut aliquet diam.';
@@ -29,3 +30,9 @@ export function doSomeStuff(
 
 console.log(person2);
 console.log(findSong?.song);
+console.log(book?.serial);
+vehicle[0].name = 'Bambang';
+console.log(vehicle[0].name);
+console.log(typeof numberBig);
+console.log(employee);
+console.log(sym1);
