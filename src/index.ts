@@ -9,6 +9,7 @@ import {
   doSomething,
   getNewOrder,
   arrayBooleanNumber,
+  checkRole,
 } from './utils/data';
 
 const longString =
@@ -48,3 +49,5 @@ console.log(sym1);
 console.log(doSomething(['Test Tuple in Function', 1]));
 console.log(getNewOrder([1, 2]));
 console.log(arrayBooleanNumber.length);
+
+checkRole({name: 'Bambang', age: 25, role: 'ADMIN'});

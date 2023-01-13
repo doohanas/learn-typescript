@@ -159,3 +159,34 @@ export const stringBooleanNumber: StringBooleanNumber = [
 //   // can't assign because it's readonly
 //   return paramsArray;
 // };
+
+/***
+ * Enum Type
+ */
+
+enum Role {
+  ADMIN = 'ADMIN',
+  USER_READ_ONLY = 'USER_READ_ONLY',
+  AUTHOR = 'AUTHOR',
+}
+
+interface Person {
+  name: string;
+  age: number;
+  hobbies?: string[];
+  role: string;
+}
+
+export const checkRole = (person: Person): void => {
+  switch (person.role) {
+    case Role.ADMIN:
+    case Role.AUTHOR:
+      console.log(`Your ${person.role} is valid`);
+      break;
+    case Role.USER_READ_ONLY:
+      console.log(`Your role is ${person.role}`);
+      break;
+    default:
+      console.log('Your Role is invalid');
+  }
+};
