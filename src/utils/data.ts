@@ -87,4 +87,75 @@ employee = {
   required: false,
 };
 
-console.log(employee);
+// Tuple Type
+interface Fruit {
+  id: number;
+  name: string;
+  city: string;
+  colour: string[];
+  serve?: [number, string, boolean];
+}
+
+const apple: Fruit = {
+  id: 1,
+  name: 'Apple',
+  city: 'Bekasi',
+  colour: ['green', 'red'],
+  serve: [30, 'juice', true],
+};
+
+apple.serve?.push('Jakarta');
+apple.serve?.push(false);
+
+// Destructring Array with Tuple type
+
+export const doSomething = (stringHash: [string, number]): string => {
+  // destructring array
+  const [inputString, hash] = stringHash;
+  return `${inputString} dan ${hash}`;
+};
+
+// Tuple with question mark (?) as an optional
+// Only can in at the end of array
+
+type OrderNumber = [number, number, number?];
+
+export const getNewOrder = (collectNumbber: OrderNumber): string => {
+  return `${collectNumbber.length}`;
+};
+
+// Tuples can also have rest elements, which have to be an array/tuple type.
+
+type BooleanNumberString = [boolean, number, ...string[]];
+type BooleanStringNumber = [boolean, ...string[], number];
+type StringBooleanNumber = [...string[], boolean, number];
+
+export const arrayBooleanNumber: BooleanNumberString = [
+  false,
+  1,
+  'Doohan',
+  'Aditya',
+];
+
+export const booleanStringNumber: BooleanStringNumber = [true, 1];
+export const booleanStringNumberTwo: BooleanStringNumber = [
+  true,
+  'Bambang',
+  'Sukiman',
+  2,
+];
+
+export const stringBooleanNumber: StringBooleanNumber = [
+  'Bambang',
+  'Sukiman',
+  true,
+  3,
+];
+
+// readonly tuple
+
+// const newFunc = (paramsArray: readonly [string, string]) => {
+//   paramsArray[0] = "Can't change";
+//   // can't assign because it's readonly
+//   return paramsArray;
+// };
